@@ -8,6 +8,9 @@ public protocol NetworkserviceProtocol {
 }
 
 public final class WebService: NetworkserviceProtocol {
+    
+    public init() {}
+    
     public func fetch<M: Decodable>(url:URL, modelType: M.Type) -> AnyPublisher<M, Error> {
         return URLSession.shared.dataTaskPublisher(for: url).map { $0.data }
             .decode(type: modelType, decoder: JSONDecoder())
