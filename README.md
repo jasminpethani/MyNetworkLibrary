@@ -1,3 +1,4 @@
 # MyNetworkLibrary
 
-A description of this package.
+- Resources Generics added 
+- Combine Webservcie which provides Decodable models
